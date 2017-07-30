@@ -9,4 +9,11 @@ export class MapgenService {
     private http: Http
   ) {}
 
+  generateMap(){
+    let headers = new Headers();
+    headers.append('Content-Type','application/json');
+    return this.http.get('http://10.10.20.58/', { headers: headers })
+      .map(res => res.json());
+  }
+
 }

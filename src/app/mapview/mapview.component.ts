@@ -275,16 +275,27 @@ export class MapviewComponent implements OnInit {
   lat: number = 31.5000;
   lng: number = -97.380979;
   zoom: number = 4;
-  iconUrl = "../../assets/images/severe-risk.png";
+  iconUrl: string = "../../assets/images/severe-risk.png";
+  userLat: number;
+  userLong: number;
 
   constructor(
-    private mapGenService: MapgenService
+    private mapGenService: MapgenService,
   ){}
 
   ngOnInit() {
+    this.mapGenService.generateMap().subscribe(data => {
+        if(data.success){
+          console.log(data);
+        } else {
+          console.log("Ya dun fuked up")
+        }
+      });
 
+    navigator.geolocation.getCurrentPosition((pos)=>{
+      console.log(pos);
+      this.userLat = pos.coords.latitude;
+      this.userLong = pos.coords.longitude;
+    })
   }
-
-
-
 }
