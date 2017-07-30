@@ -9,6 +9,7 @@ agm-map {
   background: linear-gradient(to bottom, #001f44 0%,#00779e 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#001f44', endColorstr='#00779e',GradientType=0 );
   height: 100%;
+  overflow: visible;
 }
 
 .donate-button {
@@ -17,6 +18,30 @@ agm-map {
   border-radius: 50px;
   padding-top: 5px;
   padding-bottom: 5px;
+}
+
+.button-size {
+  padding: 5px;
+  border: 2px solid #11f7fc;
+  border-radius: 20px;
+  color: white;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+}
+
+.button:hover {
+  background-color: red;
+}
+
+.vacc-color {
+  color: #11f7fc;
+  margin-bottom: 10px;
+}
+
+.donate-color {
+  background-color: #11f7fc;
+  color: #001f44;
 }
 
 .fontbold {
@@ -41,4 +66,9 @@ agm-map {
 .c-affected {
   color: #11f7fc;
   font-weight: bold;
+}
+
+.brand-img {
+  max-width: 173px;
+  max-height: 35px;
 }

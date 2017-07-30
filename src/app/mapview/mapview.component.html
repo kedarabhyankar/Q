@@ -1,12 +1,12 @@
 <div id="back-fill">
-  <nav class="navbar navbar-default">
+  <nav class="navbar navbar-default" style="height: ">
     <div class="container">
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
           <span class="sr-only">Toggle navigation</span>
         </button>
-        <a class="navbar-brand" href="/mapview"><img src="../../assets/images/antidote_logo.png"/></a>
+        <a class="navbar-brand" href="/mapview"><img class="brand-img" src="../../assets/images/antidote_logo.png"/></a>
       </div>
       <ul class="nav navbar-nav navbar-right">
         <li><a class="fonts" routerLink="/about" routerLinkActive="active">About</a></li>
@@ -15,6 +15,11 @@
     </div>
   </nav>
   <div class='container'>
+    <div class='row'>
+      <div class='col-md-offset-3 col-md-9' style="margin-bottom: 20px">
+        <img class='img-responsive' src='../../assets/images/time-divider-2.png' />
+      </div>
+    </div>
     <div class='row'>
       <div class='col-md-3'>
         <p class="d-name" (click)="isCollapsed = !isCollapsed">MALARIA</p>
@@ -30,21 +35,45 @@
               <li class="d-descrip">Red Cross dispatched to area.</li>
               <li class="d-descrip">82,372 vaccines distributed.</li>
             </ul>
+            <a class="button-size vacc-color" routerLink="/" routerLinkActive="active">Get Your Vaccine</a>
+            <a class="button-size donate-color" routerLink="/donate" routerLinkActive="active">Donate to Relief Efforts</a>
           </div>
         </div>
+        <div style="border: solid .5px white; opacity: .2; margin-top: 10px; margin-bottom: 10px"></div>
         <p class="d-name" (click)="isCollapsed2 = !isCollapsed2">ZIKA</p>
         <div (collapsed)="collapsed($event)"
              (expanded)="expanded($event)"
              [collapse]="isCollapsed2"
              class="card card-block card-header">
-          <div class="well well-lg">Some content</div>
+          <div>
+            <p class="d-descrip">Disease description with lots of facts goes here.</p>
+            <p class="c-affected">Affecting...</p>
+            <p class="d-descrip">July 30th Update</p>
+            <ul>
+              <li class="d-descrip">Red Cross dispatched to area.</li>
+              <li class="d-descrip">82,372 vaccines distributed.</li>
+            </ul>
+            <a class="button-size vacc-color" routerLink="/" routerLinkActive="active">Get Your Vaccine</a>
+            <a class="button-size donate-color" routerLink="/donate" routerLinkActive="active">Donate to Relief Efforts</a>
+          </div>
         </div>
+        <div style="border: solid .5px white; opacity: .2; margin-top: 10px; margin-bottom: 10px"></div>
         <p class="d-name" (click)="isCollapsed3 = !isCollapsed3">SMALLPOX</p>
         <div (collapsed)="collapsed($event)"
              (expanded)="expanded($event)"
              [collapse]="isCollapsed3"
              class="card card-block card-header">
-          <div class="well well-lg">Some content</div>
+          <div>
+            <p class="d-descrip">Disease description with lots of facts goes here.</p>
+            <p class="c-affected">Affecting...</p>
+            <p class="d-descrip">July 30th Update</p>
+            <ul>
+              <li class="d-descrip">Red Cross dispatched to area.</li>
+              <li class="d-descrip">82,372 vaccines distributed.</li>
+            </ul>
+            <a class="button-size vacc-color" routerLink="/" routerLinkActive="active">Get Your Vaccine</a>
+            <a class="button-size donate-color" routerLink="/donate" routerLinkActive="active">Donate to Relief Efforts</a>
+          </div>
         </div>
       </div>
       <div class='col-md-9'>
