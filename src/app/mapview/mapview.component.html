@@ -28,12 +28,12 @@
              [collapse]="isCollapsed"
              class="card card-block card-header">
           <div>
-            <p class="d-descrip">Disease description with lots of facts goes here.</p>
+            <p class="d-descrip">Malaria is a life-threatening disease that’s typically transmitted through the bite of an infected mosquito.</p>
             <p class="c-affected">Affecting...</p>
             <p class="d-descrip">July 30th Update</p>
             <ul>
-              <li class="d-descrip">Red Cross dispatched to area.</li>
-              <li class="d-descrip">82,372 vaccines distributed.</li>
+              <li class="d-descrip">Hospitals crowded.</li>
+              <li class="d-descrip">12,372 vaccines distributed.</li>
             </ul>
             <a class="button-size vacc-color" routerLink="/" routerLinkActive="active">Get Your Vaccine</a>
             <a class="button-size donate-color" routerLink="/donate" routerLinkActive="active">Donate to Relief Efforts</a>
@@ -46,30 +46,30 @@
              [collapse]="isCollapsed2"
              class="card card-block card-header">
           <div>
-            <p class="d-descrip">Disease description with lots of facts goes here.</p>
+            <p class="d-descrip">Zika is spread by infected mosquitoes and can negatively affect a pregnant woman and her baby. This can result in severe brain malformations and birth defects.</p>
             <p class="c-affected">Affecting...</p>
             <p class="d-descrip">July 30th Update</p>
             <ul>
               <li class="d-descrip">Red Cross dispatched to area.</li>
-              <li class="d-descrip">82,372 vaccines distributed.</li>
+              <li class="d-descrip">200,372 vaccines distributed.</li>
             </ul>
             <a class="button-size vacc-color" routerLink="/" routerLinkActive="active">Get Your Vaccine</a>
             <a class="button-size donate-color" routerLink="/donate" routerLinkActive="active">Donate to Relief Efforts</a>
           </div>
         </div>
         <div style="border: solid .5px white; opacity: .2; margin-top: 10px; margin-bottom: 10px"></div>
-        <p class="d-name" (click)="isCollapsed3 = !isCollapsed3">SMALLPOX</p>
+        <p class="d-name" (click)="isCollapsed3 = !isCollapsed3">INFLUENZA</p>
         <div (collapsed)="collapsed($event)"
              (expanded)="expanded($event)"
              [collapse]="isCollapsed3"
              class="card card-block card-header">
           <div>
-            <p class="d-descrip">Disease description with lots of facts goes here.</p>
+            <p class="d-descrip">Influenza (the flu) is a virus that that spreads around the world in a yearly outbreak.</p>
             <p class="c-affected">Affecting...</p>
             <p class="d-descrip">July 30th Update</p>
             <ul>
               <li class="d-descrip">Red Cross dispatched to area.</li>
-              <li class="d-descrip">82,372 vaccines distributed.</li>
+              <li class="d-descrip">100,372 vaccines distributed.</li>
             </ul>
             <a class="button-size vacc-color" routerLink="/" routerLinkActive="active">Get Your Vaccine</a>
             <a class="button-size donate-color" routerLink="/donate" routerLinkActive="active">Donate to Relief Efforts</a>
@@ -79,6 +79,8 @@
       <div class='col-md-9'>
         <agm-map [styles]="myStyles" [zoom]="zoom" [latitude]="lat" [longitude]="lng">
           <agm-marker [iconUrl]="iconUrl" [latitude]="lat" [longitude]="lng"></agm-marker>
+          <agm-marker [iconUrl]="iconUrl2" [latitude]="lat2" [longitude]="lng2"></agm-marker>
+          <agm-marker [iconUrl]="iconUrl3" [latitude]="lat3" [longitude]="lng3"></agm-marker>
         </agm-map>
       </div>
     </div>

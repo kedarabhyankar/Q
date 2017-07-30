@@ -274,28 +274,20 @@ export class MapviewComponent implements OnInit {
   title: string = 'diseases';
   lat: number = 31.5000;
   lng: number = -97.380979;
+  lat2: number = 34.50000;
+  lng2: number = -90.380979;
+  lat3: number = 29.0000;
+  lng3: number = -87.38784;
   zoom: number = 4;
   iconUrl: string = "../../assets/images/severe-risk.png";
-  userLat: number;
-  userLong: number;
+  iconUrl2: string = "../../assets/images/low-risk.png";
+  iconUrl3: string = "../../assets/images/medium-risk.png";
 
   constructor(
     private mapGenService: MapgenService,
   ){}
 
   ngOnInit() {
-    this.mapGenService.generateMap().subscribe(data => {
-        if(data.success){
-          console.log(data);
-        } else {
-          console.log("Ya dun fuked up")
-        }
-      });
-
-    navigator.geolocation.getCurrentPosition((pos)=>{
-      console.log(pos);
-      this.userLat = pos.coords.latitude;
-      this.userLong = pos.coords.longitude;
-    })
   }
+
 }
