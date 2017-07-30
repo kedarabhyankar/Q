@@ -162,6 +162,7 @@ export class MapviewComponent implements OnInit {
   lat: number = 39.5000;
   lng: number = -97.380979;
   zoom: number = 4;
+  iconUrl = "../../assets/images/severe-risk.png";
 
 
   constructor(

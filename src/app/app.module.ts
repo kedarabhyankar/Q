@@ -12,6 +12,8 @@ import { MapgenService } from './mapgen.service';
 import { AboutComponent } from './about/about.component';
 import { DonateComponent } from './donate/donate.component';
 
+// 10.10.20.58
+
 const appRoutes: Routes = [
   { path: 'mapview', component: MapviewComponent },
   { path: 'about', component: AboutComponent},

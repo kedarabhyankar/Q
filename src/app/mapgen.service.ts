@@ -9,6 +9,4 @@ export class MapgenService {
     private http: Http
   ) {}
 
-
-
 }

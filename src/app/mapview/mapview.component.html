@@ -6,38 +6,52 @@
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
           <span class="sr-only">Toggle navigation</span>
         </button>
-        <a class="navbar-brand" href="/mapview"><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3NzctLis3Nzc3Nzc3Nzc3Lzc3Nzc3Nzc3Njc3NzcrNDUvNzc3LTUsKzc3Kzc3Lf/AABEIAB4AHgMBIgACEQEDEQH/xAAYAAADAQEAAAAAAAAAAAAAAAAFBgcEA//EACoQAAEDAgQFAwUAAAAAAAAAAAECAwQAEQUSITEGIkFhcQcTUTOBgpHB/8QAFwEAAwEAAAAAAAAAAAAAAAAAAgMEAf/EAB0RAAICAgMBAAAAAAAAAAAAAAECAAMEIREiMRL/2gAMAwEAAhEDEQA/ABaozRdJC1D71qRGCUJU2n3STqpSSQO1LqJjpUecimLDn2n4rbsnM4WgWvbLgbbsepvualuY/OpRiopftNsXDUTAW5DSUhYID6bDJ3oWcNDa3GyrNkWU3I3saYCxHGHFlsWQoWFlZr9vFYpLamZDgUANRa2x0oaHJ0YzMqC8MIkpaUXT8XqgzpfD0vBYGGQMRjt4un6KAjOAojUOG1kjTc7VMMWlOh5LDRy5gb9ydB/aL8JYcwjDMQnKGYtLTGQki/MsEqUfxTYeac6gIWMXiq1l6onpMdeDoD70RfEHEUhtvDWUlZOYW5dDoNvHWlF/1AhzZ8t2Sw602t5amSkA8lzlBHQ2tXP1BxdEKBhnDkVpTEMx2pc32jlL61i4/Q+evgVPd9/iiqqAXmZl2E2FQdAz/9k=" /></a>
+        <a class="navbar-brand" href="/mapview"><img src="../../assets/images/antidote_logo.png"/></a>
       </div>
       <ul class="nav navbar-nav navbar-right">
-        <li><a routerLink="/about" routerLinkActive="active">About</a></li>
-        <li><a routerLink="/donate" routerLinkActive="active">Donate To Relief Efforts</a></li>
+        <li><a class="fonts" routerLink="/about" routerLinkActive="active">About</a></li>
+        <li><a class="btn btn-default navbar-btn donate-button fontbold" routerLink="/donate" routerLinkActive="active">Donate To Relief Efforts</a></li>
       </ul>
     </div>
   </nav>
-  <div class='sidebar'>
-    <p (click)="isCollapsed = !isCollapsed">Toggle collapse</p>
-    <div (collapsed)="collapsed($event)"
-         (expanded)="expanded($event)"
-         [collapse]="isCollapsed"
-         class="card card-block card-header">
-      <div class="well well-lg">Some content</div>
-    </div>
-    <p (click)="isCollapsed2 = !isCollapsed2">Toggle collapse</p>
-    <div (collapsed)="collapsed($event)"
-         (expanded)="expanded($event)"
-         [collapse]="isCollapsed2"
-         class="card card-block card-header">
-      <div class="well well-lg">Some content</div>
-    </div>
-    <p (click)="isCollapsed3 = !isCollapsed3">Toggle collapse</p>
-    <div (collapsed)="collapsed($event)"
-         (expanded)="expanded($event)"
-         [collapse]="isCollapsed3"
-         class="card card-block card-header">
-      <div class="well well-lg">Some content</div>
+  <div class='container'>
+    <div class='row'>
+      <div class='col-md-3'>
+        <p class="d-name" (click)="isCollapsed = !isCollapsed">MALARIA</p>
+        <div (collapsed)="collapsed($event)"
+             (expanded)="expanded($event)"
+             [collapse]="isCollapsed"
+             class="card card-block card-header">
+          <div>
+            <p class="d-descrip">Disease description with lots of facts goes here.</p>
+            <p class="c-affected">Affecting...</p>
+            <p class="d-descrip">July 30th Update</p>
+            <ul>
+              <li class="d-descrip">Red Cross dispatched to area.</li>
+              <li class="d-descrip">82,372 vaccines distributed.</li>
+            </ul>
+          </div>
+        </div>
+        <p class="d-name" (click)="isCollapsed2 = !isCollapsed2">ZIKA</p>
+        <div (collapsed)="collapsed($event)"
+             (expanded)="expanded($event)"
+             [collapse]="isCollapsed2"
+             class="card card-block card-header">
+          <div class="well well-lg">Some content</div>
+        </div>
+        <p class="d-name" (click)="isCollapsed3 = !isCollapsed3">SMALLPOX</p>
+        <div (collapsed)="collapsed($event)"
+             (expanded)="expanded($event)"
+             [collapse]="isCollapsed3"
+             class="card card-block card-header">
+          <div class="well well-lg">Some content</div>
+        </div>
+      </div>
+      <div class='col-md-9'>
+        <agm-map [styles]="myStyles" [zoom]="zoom" [latitude]="lat" [longitude]="lng">
+          <agm-marker [iconUrl]="iconUrl" [latitude]="lat" [longitude]="lng"></agm-marker>
+        </agm-map>
+      </div>
     </div>
   </div>
-  <agm-map [styles]="myStyles" [zoom]="zoom" [latitude]="lat" [longitude]="lng">
-    <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
-  </agm-map>
 </div>
